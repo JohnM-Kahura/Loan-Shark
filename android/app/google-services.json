@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "996941720434",
+    "project_id": "kalunde-loans",
+    "storage_bucket": "kalunde-loans.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996941720434:android:ecc979e22b7a09ce570beb",
+        "android_client_info": {
+          "package_name": "com.example.shark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996941720434-qsbsr68sqlmrtnkai52o0on8q2fd5085.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTYPEh5al0gi3pzVRYwIBAY5O1DwVCQ-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996941720434-qsbsr68sqlmrtnkai52o0on8q2fd5085.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
