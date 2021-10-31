@@ -2,6 +2,7 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:shark/config/colors.dart';
+import 'package:shark/screens/entry.dart';
 import 'package:shark/screens/outstading.dart';
 import 'package:shark/screens/settled.dart';
 
@@ -15,8 +16,12 @@ class MainActivity extends StatefulWidget {
 class _MainActivityState extends State<MainActivity> {
   int _currentIndex = 0;
   //tabs in the app
-  List<Widget> tabs = [const OutstandingLoans(), SettledLoans(), Container()];
-  List title = ['Outstanding Loans', 'Settled Loans', 'Over due loans'];
+  List<Widget> tabs = [
+    const OutstandingLoans(),
+    const LoanEntry(),
+    const SettledLoans()
+  ];
+  List title = ['Outstanding Loans', 'Loanee details', 'Settled Loans'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,14 +46,14 @@ class _MainActivityState extends State<MainActivity> {
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: const Icon(Icons.qr_code),
-            title: const Text('Settled Loans'),
+            icon: const Icon(Icons.add_box),
+            title: const Text('New Entry'),
             activeColor: Colors.white,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: const Icon(Icons.qr_code),
-            title: const Text('Over due loans'),
+            icon: const Icon(Icons.done_outline_rounded),
+            title: const Text('Settled Loans'),
             activeColor: Colors.white,
             textAlign: TextAlign.center,
           ),

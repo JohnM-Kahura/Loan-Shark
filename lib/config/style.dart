@@ -11,3 +11,6 @@ TextStyle cardStyle = const TextStyle(
   fontWeight: FontWeight.w400,
   fontSize: 20,
 );
+TextStyle buttonTextStyle = const TextStyle(
+  color: Colors.black,
+);
