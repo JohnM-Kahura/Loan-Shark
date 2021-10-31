@@ -3,7 +3,7 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:shark/config/colors.dart';
 import 'package:shark/screens/entry.dart';
-import 'package:shark/screens/outstading.dart';
+import 'package:shark/screens/outstanding.dart';
 import 'package:shark/screens/settled.dart';
 
 class MainActivity extends StatefulWidget {
