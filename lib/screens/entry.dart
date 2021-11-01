@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shark/config/colors.dart';
 import 'package:shark/config/style.dart';
@@ -13,8 +14,22 @@ class _LoanEntryState extends State<LoanEntry> {
   TextEditingController nameController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController amountController = TextEditingController();
+  TextEditingController interestController = TextEditingController();
   //TODO: change the type of duration
   TextEditingController durationController = TextEditingController();
+
+  create(String name, String phone, String amount, String interest) {
+    Map<String, String> newEntry = {
+      'Name': name,
+      'Phone': phone,
+      'Amount': amount,
+      'Interest': interest
+    };
+    CollectionReference collectionReference =
+        FirebaseFirestore.instance.collection('Loans');
+    collectionReference.add(newEntry);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +38,9 @@ class _LoanEntryState extends State<LoanEntry> {
           customTextFeild('Name', nameController, TextInputType.name),
           customTextFeild('Phone', phoneController, TextInputType.phone),
           customTextFeild('Amount', amountController, TextInputType.number),
-          customTextFeild(
-              'Duration', durationController, TextInputType.datetime),
+          customTextFeild('Interest', interestController, TextInputType.number),
+          customTextFeild('Duration in Months', durationController,
+              const TextInputType.numberWithOptions()),
           Container(
             width: double.infinity,
             margin: const EdgeInsets.only(top: 20),
