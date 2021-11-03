@@ -1,10 +1,7 @@
-import 'dart:html';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shark/config/colors.dart';
 import 'package:shark/config/style.dart';
-import 'package:shark/screens/entry.dart';
 
 class OutstandingLoans extends StatefulWidget {
   const OutstandingLoans({Key? key}) : super(key: key);
